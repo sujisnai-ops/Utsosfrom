@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .form-card {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .field-group {
+            margin-bottom: 15px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        input[type="text"], 
+        input[type="password"], 
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .inline-options {
+            margin-top: 5px;
+        }
+        .inline-options label {
+            display: inline-block;
+            font-weight: normal;
+            margin-right: 15px;
+        }
+        input[type="submit"] {
+            width: 100%;
+            background-color: #007bff;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-card">
+    <h1>Input Form</h1>
+
+    <!-- Web3Forms Submit Action -->
+    <form action="https://api.web3forms.com/submit" method="POST">
+
+      51683c08-3fe6-4905-b54a-1c4f336fe6c8
+        <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY_HERE">
+
+        <div class="field-group">
+            <label>First name:</label>
+            <input type="text" name="firstname" required>
+        </div>
+
+        <div class="field-group">
+            <label>Last name:</label>
+            <input type="text" name="lastname" required>
+        </div>
+
+        <div class="field-group">
+            <label>Username:</label>
+            <input type="text" name="user" required>
+        </div>
+
+        <div class="field-group">
+            <label>Password:</label>
+            <input type="password" name="pwd" required>
+        </div>
+
+        <div class="field-group">
+            <label>Gender:</label>
+            <div class="inline-options">
+                <label><input type="radio" name="sex" value="male"> Male</label>
+                <label><input type="radio" name="sex" value="female"> Female</label>
+            </div>
+        </div>
+
+        <div class="field-group">
+            <label>Religion:</label>
+            <div class="inline-options">
+                <label><input type="checkbox" name="religion" value="Muslim"> Muslim</label>
+                <label><input type="checkbox" name="religion" value="Others"> Others</label>
+            </div>
+        </div>
+
+        <div class="field-group">
+            <label>IT Experience:</label>
+            <div class="inline-options">
+                <label><input type="checkbox" name="experience" value="Hardware Expert"> Hardware Expert</label><br>
+                <label><input type="checkbox" name="experience" value="Software Expert"> Software Expert</label><br>
+                <label><input type="checkbox" name="experience" value="Graphic Designer"> Graphic Designer</label><br>
+                <label><input type="checkbox" name="experience" value="Network Expert"> Network Expert</label>
+            </div>
+        </div>
+
+        <div class="field-group">
+            <label>Select Department:</label>
+            <select name="Department">
+                <option value="CSE">CSE</option>
+                <option value="EEE">EEE</option>
+                <option value="Power">Power</option>
+                <option value="Pharmacy">Pharmacy</option>
+            </select>
+        </div>
+
+        <input type="submit" value="Submit">
+
+    </form>
+</div>
+
+</body>
+</html>
